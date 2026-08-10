@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Brand palette — drawn from the Vibras Nails+ identity */
+  --color-fucsia: #d81b87;
+  --color-fucsia-deep: #b81371;
+  --color-magenta: #e0218a;
+  --color-violeta: #6a2b9a;
+  --color-violeta-deep: #4e1f77;
+  --color-oro: #f7b731;
+  --color-oro-deep: #e6a41f;
+  --color-rosa: #fce3f0;
+  --color-rosa-soft: #fbeef6;
+  --color-crema: #fff7fb;
+  --color-tinta: #3a1e33;
+
+  --font-script: 'Pacifico', cursive;
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+
+  --radius-xl2: 2rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-crema);
+    color: var(--color-tinta);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--color-fucsia);
+    color: white;
+  }
+}
+
+/* Hide scrollbar until scrolling */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+/* The signature brand wordmark, approximating the logo lockup */
+.brand-wordmark {
+  font-family: var(--font-script);
+  line-height: 0.85;
+}
